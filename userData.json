@@ -1,0 +1,36 @@
+[
+    {
+        "id": "1",
+        "implementer": "Tracy Buckridge Sr.2",
+        "lastTrainer": "Maxine Lemke",
+        "currentTrainer": "Christine Hagenes",
+        "trainingHours": 31355,
+        "numberOfLicenses": 68599,
+        "paymentMethod": "Credit Card",
+        "plan": "MBG standar per CP",
+        "moUser": "One user",
+        "adminUser": "quod",
+        "firstPassword": "wZ72SbFmukjWSbQ",
+        "secondPassword": "t4u8Kg8S87Jj4Lt",
+        "pwMoUser": "20eQznnIbulDHwA",
+        "sysPW": "UDWyn4PH0incyq7",
+        "portalWebAccess": "http://interesting-cash.com",
+        "scanAwayFloder": "https://junior-borrower.com",
+        "avatar": "http://loremflickr.com/640/480/business",
+        "registrationDate": "2022-05-20T22:03:02.521Z",
+        "clinic": "Mitchell - Pouros",
+        "clinicAdress": "94718 Laurence Ferry Suite 127",
+        "statateMedicalLicense": 10014421,
+        "ip": "189.162.116.110",
+        "account": "Activa",
+        "phoneNumber": "743-438-8437 x927",
+        "companyMail": "Monica34@example.com",
+        "timeZone": "America/Chihuah2"
+    },
+    {
+        "implementer": "2",
+        "price": "2",
+        "url": "2",
+        "id": 2
+    }
+]
