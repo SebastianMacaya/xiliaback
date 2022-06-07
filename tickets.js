@@ -13,7 +13,7 @@ class Ticket {
 
         dataTemporal.push(newTicket);
         await fs.promises.writeFile("ticketsData.json", JSON.stringify(dataTemporal));
-        res.json({ data: newTicket, status: "Fue creado el ticket" });
+        res.redirect('http://localhost:3000/nuevoticket')
     }
 
 
