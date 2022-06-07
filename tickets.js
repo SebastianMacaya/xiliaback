@@ -7,6 +7,10 @@ class Ticket {
         const dataTemporal = archivo;
         const newTicket = req.body;
         newTicket.id = dataTemporal.length + 1;
+        newTicket.date = new Date();
+        newTicket.lastChange = new Date();
+        newTicket.status = "En progreso";
+
         dataTemporal.push(newTicket);
         await fs.promises.writeFile("ticketsData.json", JSON.stringify(dataTemporal));
         res.json({ data: newTicket, status: "Fue creado el ticket" });
