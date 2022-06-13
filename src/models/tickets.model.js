@@ -33,7 +33,7 @@ const Schema = mongoose.Schema(
         },
         owner: {
             typeo: String,
-            required: true
+            required: false
         }
 
     }
