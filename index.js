@@ -1,8 +1,11 @@
-const express = require("express");
-const morgan = require("morgan");
-const routes = require("./src/routes/routes");
+import express from "express";
+import morgan from "morgan";
+import routes from "./src/routes/routes.js";
 const PORT = 8080;
-const cors = require("cors");
+import cors from "cors";
+import "./src/db.js";
+import dotenv from "dotenv";
+dotenv.config();
 //middleware
 const app = express();
 app.use(cors());

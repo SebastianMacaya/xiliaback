@@ -1,5 +1,5 @@
-const fs = require("fs");
-const archivo = JSON.parse(fs.readFileSync("./userData.json", (encoding = "utf8")));
+import fs from "fs";
+const archivo = JSON.parse(fs.readFileSync("./userData.json"));
 
 class Users {
     async create(req, res) {
@@ -51,5 +51,4 @@ class Users {
     }
 }
 
-
-module.exports = new Users();
+export default new Users();

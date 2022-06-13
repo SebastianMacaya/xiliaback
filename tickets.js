@@ -1,5 +1,5 @@
-const fs = require("fs");
-const archivo = JSON.parse(fs.readFileSync("./ticketsData.json", (encoding = "utf8")));
+import fs from "fs";
+const archivo = JSON.parse(fs.readFileSync("./ticketsData.json"));
 
 
 class Ticket {
@@ -55,4 +55,4 @@ class Ticket {
         res.json({ nota: "Fue borrado el ticket" });
     }
 }
-module.exports = new Ticket();
+export default new Ticket();

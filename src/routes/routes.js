@@ -1,7 +1,8 @@
-const { Router } = require("express");
+import { Router } from "express";
 const router = Router();
-const Users = require("../../users");
-const Tickets = require("../../tickets");
+import Users from "../../users.js";
+
+import { ticketControllers } from "../controllers/index.js"
 
 //Routes users
 router.get("/api/users", Users.getAll);
@@ -10,14 +11,13 @@ router.put("/api/users/:id", Users.updateById);
 router.delete("/api/users/:id", Users.deleteById);
 router.post("/api/users", Users.create);
 
-//Routes tickets
-router.get("/api/tickets", Tickets.getAll);
-router.get("/api/tickets/:id", Tickets.findById);
-router.put("/api/tickets/:id", Tickets.updateById);
-router.delete("/api/tickets/:id", Tickets.deleteById);
-router.post("/api/tickets", Tickets.create);
 
 
+//Mongo db test
+router
+    .get("/api/tickets/:id?", ticketControllers.getTickets)
+    .post("/api/tickets", ticketControllers.saveTicket)
+    .delete("/api/tickets/:id", ticketControllers.deleteTicket)
+    .put("/api/tickets/:id", ticketControllers.updateTicket);
 
-
-module.exports = router;
+export default router;
