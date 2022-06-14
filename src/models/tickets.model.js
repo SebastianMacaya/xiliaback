@@ -30,6 +30,10 @@ const Schema = mongoose.Schema(
         lastChange: {
             type: String,
             required: true
+        },
+        name: {
+            type: String,
+            required: true
         }
 
     }
