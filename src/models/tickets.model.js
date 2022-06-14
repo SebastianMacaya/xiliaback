@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema(
     {
+        owner: {
+            type: String,
+            required: true
+        },
         ticketId: {
             type: String,
             required: true,
-        },
-        owner: {
-            typeo: String,
-            required: false
         },
         date: {
             type: String,
@@ -20,7 +20,7 @@ const Schema = mongoose.Schema(
         ,
         subject: {
             type: String,
-            required: true
+            required: false
         },
         status: {
             type: String,
@@ -37,7 +37,7 @@ const Schema = mongoose.Schema(
         },
         client: {
             type: String,
-            required: true
+            required: false
         }
 
     }
