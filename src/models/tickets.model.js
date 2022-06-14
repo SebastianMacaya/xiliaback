@@ -5,12 +5,16 @@ const Schema = mongoose.Schema(
             type: String,
             required: true,
         },
+        owner: {
+            typeo: String,
+            required: false
+        },
         date: {
             type: String,
             required: true
         },
-        owner: {
-            typeo: String,
+        participants: {
+            type: String,
             required: false
         }
         ,
@@ -31,7 +35,7 @@ const Schema = mongoose.Schema(
             type: String,
             required: true
         },
-        name: {
+        client: {
             type: String,
             required: true
         }
