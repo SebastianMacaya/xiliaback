@@ -9,9 +9,9 @@ const Schema = mongoose.Schema(
             type: String,
             required: true
         },
-        name: {
-            type: String,
-            required: true
+        owner: {
+            typeo: String,
+            required: false
         }
         ,
         subject: {
@@ -30,10 +30,6 @@ const Schema = mongoose.Schema(
         lastChange: {
             type: String,
             required: true
-        },
-        owner: {
-            typeo: String,
-            required: false
         }
 
     }
