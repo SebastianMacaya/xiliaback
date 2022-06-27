@@ -1,5 +1,6 @@
 import TicketServices from "../services/tickets.services.js";
 import { ticketModel } from "../models/tickets.model.js";
+import dayjs from "dayjs";
 const ticketServices = new TicketServices(ticketModel);
 
 export const getTickets = async (req, res) => {
@@ -24,12 +25,12 @@ export const getTickets = async (req, res) => {
 export const saveTicket = async (req, res) => {
     try {
         const newTicket = req.body;
-        newTicket.date = new Date();
+        const date = dayjs()
+        newTicket.date = (date.format("MMM DDdd,YYYY - H:MMa"))
         newTicket.lastChange = new Date();
         newTicket.status = "En progreso";
         newTicket.ticketId = (Object.keys(await ticketServices.getTickets()).length)
         const ticket = await ticketServices.createTicket(newTicket);
-
         res.redirect('http://localhost:3000/nuevoticket')
     } catch (error) {
         console.log(error);
