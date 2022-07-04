@@ -12,9 +12,9 @@ class Services {
         }
     };
 
-    getById = async (id) => {
+    getById = async (ticketId) => {
         try {
-            const item = await this.model.findById(id);
+            const item = await this.model.findOne({ ticketId });
             return item;
         } catch (error) {
             console.log(error);
