@@ -38,6 +38,10 @@ const Schema = mongoose.Schema(
         client: {
             type: String,
             required: false
+        },
+        type: {
+            type: String,
+            required: false
         }
 
     }
