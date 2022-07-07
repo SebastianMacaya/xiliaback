@@ -52,16 +52,18 @@ export const deleteTicket = async (req, res) => {
 };
 
 export const updateTicket = async (req, res) => {
-    const ticketId = req.params.id;
-    const ticketoNuevo = req.body;
+    const idOldTicket = req.params.id;
+    const ticketNuevo = req.body;
 
     try {
+
         const modificado = await ticketServices.updateTicketById(
-            ticketId,
-            ticketoNuevo
+            idOldTicket,
+            ticketNuevo
         );
-        res.status(200).send({ modificado });
+        res.status(200).send(modificado);
     } catch (error) {
         console.log(error);
     }
 };
+

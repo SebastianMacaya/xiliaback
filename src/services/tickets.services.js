@@ -8,19 +8,23 @@ class TicketServices extends Services {
     getTicketById = async (id) => await this.getById(id)
     createTicket = async (item) => await this.createDocument(item)
     deleteTicketById = async (id) => await this.deleteById(id)
-    updateTicketById = async (id, item) => {
-        const { date, name, subject, status, priority, lastChange, owner } = ticket
+    updateTicketById = async (id, ticket) => {
+        const { owner, date, type, participants, subject, status, priority, lastChange, client } = ticket
         try {
             await this.model.findByIdAndUpdate(id, {
+                owner,
                 date,
-                name,
+                type,
+                participants,
                 subject,
                 status,
                 priority,
                 lastChange,
-                owner,
-            });
-            const updated = await this.model.findById(id)
+                client
+
+            })
+
+            const updated = await this.model.findById(id);
             return updated
         }
         catch (error) { console.log(error) }

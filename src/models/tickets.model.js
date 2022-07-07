@@ -42,6 +42,10 @@ const Schema = mongoose.Schema(
         type: {
             type: String,
             required: false
+        },
+        detalle: {
+            type: String,
+            required: false
         }
 
     }
