@@ -44,7 +44,7 @@ const Schema = mongoose.Schema(
             required: false
         },
         detalle: {
-            type: String,
+            type: Array,
             required: false
         }
 
