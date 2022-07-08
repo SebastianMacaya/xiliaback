@@ -61,6 +61,7 @@ export const updateTicket = async (req, res) => {
             idOldTicket,
             ticketNuevo
         );
+
         res.status(200).send(modificado);
     } catch (error) {
         console.log(error);

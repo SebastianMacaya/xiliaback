@@ -9,7 +9,7 @@ class TicketServices extends Services {
     createTicket = async (item) => await this.createDocument(item)
     deleteTicketById = async (id) => await this.deleteById(id)
     updateTicketById = async (id, ticket) => {
-        const { owner, date, type, participants, subject, status, priority, lastChange, client } = ticket
+        const { owner, date, type, participants, subject, status, priority, lastChange, client, detalle } = ticket
         try {
             await this.model.findByIdAndUpdate(id, {
                 owner,
@@ -20,7 +20,8 @@ class TicketServices extends Services {
                 status,
                 priority,
                 lastChange,
-                client
+                client,
+                detalle
 
             })
 
