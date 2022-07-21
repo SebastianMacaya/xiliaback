@@ -21,10 +21,9 @@ class TicketServices extends Services {
                 priority,
                 lastChange,
                 client,
-                detalle
+                $push: { detalle: detalle }
 
             })
-
             const updated = await this.model.findById(id);
             return updated
         }
